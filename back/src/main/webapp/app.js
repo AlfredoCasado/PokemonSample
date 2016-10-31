@@ -1,9 +1,10 @@
 (function(angular) {
   'use strict';
 
-  function MainController($http) {
+  function MainController($http, httpService) {
     var ctrl = this;
     ctrl.$http = $http;
+    ctrl.httpService = httpService;
 
     ctrl.list = ['Loading...'];
     ctrl.root = 'http://localhost:8080/springrest';
@@ -37,11 +38,22 @@
 
     ctrl.showList = function() {
       ctrl.showDetail = false;
+      ctrl.load();
     };
 
     ctrl.create = function(pokemon) {
       console.log("up:", pokemon);
 
+      ctrl.httpService.post('/pokemons', pokemon)
+        .then(function successCallback(response) {
+          console.log('ok');
+          ctrl.showNew = false;
+          ctrl.load();
+        })
+        .catch(function errorCallback(response) {
+          // called asynchronously if an error occurs
+          // or server returns response with an error status.
+        });
 
     }
   }
