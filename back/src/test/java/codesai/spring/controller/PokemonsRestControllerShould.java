@@ -27,8 +27,8 @@ public class PokemonsRestControllerShould {
 
     @Test
     public void return_all_customers() {
-        PokemonRepository.pokemons.add(new Pokemon("1", "pokemonName", validDescription,"electrico","", false));
-        PokemonRepository.pokemons.add(new Pokemon("2", "pokemonName", validDescription,"electrico","", false));
+        inMemoryRepository.pokemons.add(new Pokemon("1", "pokemonName", validDescription,"electrico","", false));
+        inMemoryRepository.pokemons.add(new Pokemon("2", "pokemonName", validDescription,"electrico","", false));
 
         List<Pokemon> customers = pokemonRestController.getPokemons();
 
@@ -37,7 +37,7 @@ public class PokemonsRestControllerShould {
 
     @Test
     public void return_an_existent_pokemon() {
-        PokemonRepository.pokemons.add(new Pokemon("1", "pokemonName", validDescription,"electrico","", false));
+        inMemoryRepository.pokemons.add(new Pokemon("1", "pokemonName", validDescription,"electrico","", false));
 
         ResponseEntity response = pokemonRestController.getPokemon("1");
 
@@ -91,7 +91,7 @@ public class PokemonsRestControllerShould {
     @Test
     public void update_a_pokemon() {
         Pokemon originalPokemon = new Pokemon("1", "pokemonName", validDescription,"electrico","", false);
-        PokemonRepository.pokemons.add(originalPokemon);
+        inMemoryRepository.pokemons.add(originalPokemon);
 
         Pokemon updatedPokemon = new Pokemon("1", "updatedName", validDescription,"electrico","", false);
         pokemonRestController.updatePokemon("1", updatedPokemon);
@@ -109,7 +109,7 @@ public class PokemonsRestControllerShould {
     @Test
     public void return_bad_request_when_try_to_update_a_pokemon_with_bad_description() {
         Pokemon originalPokemon = new Pokemon("1", "pokemonName", validDescription,"electrico","", false);
-        PokemonRepository.pokemons.add(originalPokemon);
+        inMemoryRepository.pokemons.add(originalPokemon);
 
         Pokemon updatedPokemon = new Pokemon("1", "updatedName", "invalid description","electrico","", false);
         ResponseEntity response = pokemonRestController.updatePokemon("1", updatedPokemon);
@@ -120,7 +120,7 @@ public class PokemonsRestControllerShould {
     @Test
     public void return_bad_request_when_try_to_edit_a_pokemon_withouth_primary_type() {
         Pokemon originalPokemon = new Pokemon("1", "pokemonName", validDescription,"electrico","", false);
-        PokemonRepository.pokemons.add(originalPokemon);
+        inMemoryRepository.pokemons.add(originalPokemon);
 
         Pokemon updatedPokemon = new Pokemon("1", "updatedName", "invalid description","","", false);
         ResponseEntity response = pokemonRestController.updatePokemon("1", updatedPokemon);
@@ -131,7 +131,7 @@ public class PokemonsRestControllerShould {
     @Test
     public void return_bad_request_when_try_to_update_a_pokemon_with_bad_name() {
         Pokemon originalPokemon = new Pokemon("1", "pokemonName", validDescription,"electrico","", false);
-        PokemonRepository.pokemons.add(originalPokemon);
+        inMemoryRepository.pokemons.add(originalPokemon);
 
         Pokemon updatedPokemon = new Pokemon("1", "", validDescription,"electrico","", false);
         ResponseEntity response = pokemonRestController.updatePokemon("1", updatedPokemon);
