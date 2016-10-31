@@ -2,7 +2,7 @@
 <div>
   <table>
     <tr ng-repeat="p in $ctrl.list track by $index">
-      <td>{{ p.id }}</td>
+      <td><span ng-show="{{p.favorite}}">&#9733;</span></td>
       <td>{{ p.name }}</td>
       <td><button ng-click="$ctrl.onView({id: p.id})">View</button></td>
     </tr>
