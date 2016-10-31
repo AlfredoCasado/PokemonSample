@@ -4,9 +4,10 @@
   <button ng-click="$ctrl.showList()">List</button>
 </div>
 
-<pokemon-new ng-if="$ctrl.showNew"></pokemon-new>
+<pokemon-new ng-if="$ctrl.showNew" on-create="$ctrl.create(pokemon)"></pokemon-new>
 
-<pokemon-detail ng-if="$ctrl.showDetail" pokemon="$ctrl.pokemon">
+<pokemon-detail ng-if="$ctrl.showDetail" pokemon="$ctrl.pokemon"
+                on-edit="$ctrl.edit(id)">
 </pokemon-detail>
 
 <pokemon-list ng-if="!$ctrl.showDetail" list="$ctrl.list"

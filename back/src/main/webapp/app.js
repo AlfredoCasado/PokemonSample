@@ -38,6 +38,12 @@
     ctrl.showList = function() {
       ctrl.showDetail = false;
     };
+
+    ctrl.create = function(pokemon) {
+      console.log("up:", pokemon);
+
+
+    }
   }
 
 
@@ -46,6 +52,8 @@
 
     ctrl.create = function(pokemon) {
       console.log(pokemon);
+
+      ctrl.onCreate({pokemon: pokemon});
     };
   }
 
@@ -69,6 +77,9 @@
     })
     .component('pokemonNew', {
       templateUrl: 'pokemonNew.html',
+      bindings: {
+        onCreate: '&'
+      },
       controller: NewController
     })
   ;
