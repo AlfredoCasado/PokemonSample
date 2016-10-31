@@ -26,13 +26,13 @@ public class PokemonsRestControllerShould {
     }
 
     @Test
-    public void return_all_customers() {
+    public void return_all_pokemons() {
         inMemoryRepository.pokemons.add(new Pokemon("1", "pokemonName", validDescription,"electrico","", false, ""));
         inMemoryRepository.pokemons.add(new Pokemon("2", "pokemonName", validDescription,"electrico","", false, ""));
 
-        List<Pokemon> customers = pokemonRestController.getPokemons();
+        List<Pokemon> pokemons = pokemonRestController.getPokemons();
 
-        Assert.assertThat(customers.size(), is(2));
+        Assert.assertThat(pokemons.size(), is(2));
     }
 
     @Test
