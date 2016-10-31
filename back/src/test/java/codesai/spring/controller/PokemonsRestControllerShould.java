@@ -139,4 +139,21 @@ public class PokemonsRestControllerShould {
         Assert.assertThat(response.getStatusCode(), is(HttpStatus.BAD_REQUEST));
     }
 
+    @Test
+    public void delte_a_pokemon() {
+        inMemoryRepository.pokemons.add(new Pokemon("1", "pokemonName", validDescription,"electrico","", false));
+
+        ResponseEntity response = pokemonRestController.deletePokemon("1");
+
+        Assert.assertThat(response.getStatusCode(), is(HttpStatus.OK));
+        Assert.assertThat(inMemoryRepository.pokemons.size(), is(0));
+    }
+
+    @Test
+    public void return_no_found_when_try_to_delete_a_non_existent_pokemon() {
+        ResponseEntity response = pokemonRestController.deletePokemon("nonExistentPokemon");
+
+        Assert.assertThat(response.getStatusCode(), is(HttpStatus.NOT_FOUND));
+    }
+
 }

@@ -55,4 +55,15 @@ public class PokemonRestController {
         return new ResponseEntity(pokemon, HttpStatus.OK);
     }
 
+    @DeleteMapping("/customers/{id}")
+    public ResponseEntity deletePokemon(@PathVariable String id) {
+
+        if (null == pokemonRepository.delete(id)) {
+            return new ResponseEntity("No Customer found for ID " + id, HttpStatus.NOT_FOUND);
+        }
+
+        return new ResponseEntity(id, HttpStatus.OK);
+
+    }
+
 }
