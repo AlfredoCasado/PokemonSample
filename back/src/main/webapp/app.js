@@ -1,7 +1,7 @@
 (function(angular) {
   'use strict';
 
-  function PokemonList($http) {
+  function Main($http) {
     var ctrl = this;
     ctrl.$http = $http;
 
@@ -22,11 +22,22 @@
           // or server returns response with an error status.
         });
     }
+
+    ctrl.onView = function(id) {
+      console.log('onView' + id);
+    }
   }
 
   angular.module('app', [])
+    .component('main', {
+      templateUrl: 'main.html',
+      controller: Main
+    })
     .component('pokemonList', {
       templateUrl: 'pokemonList.html',
-      controller: PokemonList
+      bindings: {
+        list: '<',
+        onView: '&'
+      }
     });
 })(window.angular);
