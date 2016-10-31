@@ -5,7 +5,12 @@
   <table>
     <tr><th>Favorite</th><th>Name</th></tr>
     <tr ng-repeat="p in $ctrl.list track by p.id | filter: $ctrl.searchText">
-      <td><span ng-show="{{p.favorite}}">&#9733;</span></td>
+      <td>
+        <a href ng-click="$ctrl.onFavorite({id: p.id})">
+          <span ng-show="{{p.favorite}}">&#9733;</span>
+          <span ng-show="{{!p.favorite}}">&#9734;</span>
+        </a>
+      </td>
       <td>{{ p.name }}</td>
       <td><button ng-click="$ctrl.onView({id: p.id})">View</button></td>
       <td><button ng-click="$ctrl.onDelete({pokemon: p})">Delete</button></td>

@@ -58,17 +58,15 @@
     }
 
     ctrl.delete = function(pokemon) {
-
-      ctrl.$http.delete(ctrl.root + '/pokemons/' + pokemon.id)
+      ctrl.httpService.delete('/pokemons/' + pokemon.id)
         .then(function successCallback(response) {
-          console.log('ok');
-        }, function errorCallback(response) {
-          // called asynchronously if an error occurs
-          // or server returns response with an error status.
-
-          console.error(response);
-          ctrl.load();
+        })
+        .catch(function errorCallback(response) {
         });
+      ctrl.load();
+    }
+
+    ctrl.favorite = function(id) {
     }
   }
 
@@ -93,7 +91,8 @@
       bindings: {
         list: '<',
         onView: '&',
-        onDelete: '&'
+        onDelete: '&',
+        onFavorite: '&'
       }
     })
     .component('pokemonDetail', {
