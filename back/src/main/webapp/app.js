@@ -7,6 +7,7 @@
 
     ctrl.list = ['Loading...'];
     ctrl.root = 'http://localhost:8080/springrest';
+    ctrl.showPokemon = false;
 
     ctrl.$onInit = function() {
       ctrl.load();
@@ -15,7 +16,6 @@
     ctrl.load = function() {
       ctrl.$http.get(ctrl.root + '/pokemons')
         .then(function successCallback(response) {
-          console.log(response);
           ctrl.list = response.data;
         }, function errorCallback(response) {
           // called asynchronously if an error occurs
@@ -24,9 +24,19 @@
     };
 
     ctrl.viewPokemon = function(id) {
-      console.log(id);
-      var i = id;
+      ctrl.$http.get(ctrl.root + '/pokemons/' + id)
+        .then(function successCallback(response) {
+          ctrl.showPokemon = true;
+          ctrl.pokemon = response.data;
+        }, function errorCallback(response) {
+          // called asynchronously if an error occurs
+          // or server returns response with an error status.
+        });
     };
+
+    ctrl.showList = function() {
+      ctrl.showPokemon = false;
+    }
   }
 
   angular.module('app', [])
@@ -39,6 +49,12 @@
       bindings: {
         list: '<',
         onView: '&'
+      }
+    })
+    .component('pokemonDetail', {
+      templateUrl: 'pokemonDetail.html',
+      bindings: {
+        pokemon: '<'
       }
     });
 })(window.angular);

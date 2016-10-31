@@ -1,6 +1,9 @@
 <h1>POKEMON</h1>
 <div>
   <button ng-click="$ctrl.new()">New</button>
+  <button ng-click="$ctrl.showList()">List</button>
 </div>
 
-<pokemon-list list="$ctrl.list" on-view="$ctrl.viewPokemon(id)"></pokemon-list>
+<pokemon-detail ng-if="$ctrl.showPokemon" pokemon="$ctrl.pokemon"></pokemon-detail>
+
+<pokemon-list ng-if="!$ctrl.showPokemon" list="$ctrl.list" on-view="$ctrl.viewPokemon(id)"></pokemon-list>

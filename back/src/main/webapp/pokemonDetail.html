@@ -1,0 +1,11 @@
+<div>
+  <table>
+    <tr><td>Favorite: {{ $ctrl.pokemon.favorite }}</td></tr>
+    <tr><td>Name: {{ $ctrl.pokemon.name }}</td></tr>
+    <tr><td>Description: {{ $ctrl.pokemon.description }}</td></tr>
+    <tr><td>Primary type: {{ $ctrl.pokemon.primaryType }}</td></tr>
+    <tr><td>Secondary type: {{ $ctrl.pokemon.secondaryType }}</td></tr>
+  </table>
+</div>
+</div>
+<button ng-click="$ctrl.on-edit({pokemon: $ctrl.pokemon})">Edit</button>
