@@ -63,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -72,8 +72,8 @@
       <file leaf-file-name="Pokemon.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/codesai/spring/model/Pokemon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+            <state relative-caret-position="495">
+              <caret line="75" column="46" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
               <folding>
                 <element signature="e#912#913#0" expanded="true" />
                 <element signature="e#937#938#0" expanded="true" />
@@ -87,6 +87,13 @@
                 <element signature="e#1239#1240#0" expanded="true" />
                 <element signature="e#1285#1286#0" expanded="true" />
                 <element signature="e#1316#1317#0" expanded="true" />
+                <element signature="e#1349#1350#0" expanded="true" />
+                <element signature="e#1428#1429#0" expanded="true" />
+                <element signature="e#1532#1533#0" expanded="true" />
+                <element signature="e#1573#1574#0" expanded="true" />
+                <element signature="e#1635#1636#0" expanded="true" />
+                <element signature="e#1669#1670#0" expanded="true" />
+                <element signature="e#1714#1715#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,8 +122,8 @@
       <file leaf-file-name="PokemonsRestControllerShould.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/codesai/spring/controller/PokemonsRestControllerShould.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
+            <state relative-caret-position="1695">
+              <caret line="124" column="88" selection-start-line="124" selection-start-column="88" selection-end-line="124" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -125,8 +132,8 @@
       <file leaf-file-name="PokemonRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/codesai/spring/repositories/PokemonRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="315">
+              <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -135,8 +142,8 @@
       <file leaf-file-name="PokemonRestController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/codesai/spring/controller/PokemonRestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+            <state relative-caret-position="555">
+              <caret line="52" column="110" selection-start-line="52" selection-start-column="110" selection-end-line="52" selection-end-column="110" />
               <folding />
             </state>
           </provider>
@@ -153,9 +160,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/codesai/spring/repositories/PokemonRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/codesai/spring/controller/PokemonRestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/codesai/spring/model/Pokemon.java" />
-        <option value="$PROJECT_DIR$/src/main/java/codesai/spring/repositories/PokemonRepository.java" />
         <option value="$PROJECT_DIR$/src/test/java/codesai/spring/controller/PokemonsRestControllerShould.java" />
       </list>
     </option>
@@ -216,124 +223,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Spring4Rest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Spring4Rest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Spring4Rest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Spring4Rest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spring" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="repositories" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Spring4Rest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spring" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -341,60 +230,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="FullScreen" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
   </component>
-  <component name="RunManager" selected="JUnit.PokemonsRestControllerShould.create_a_new_pokemon">
-    <configuration default="false" name="PokemonsRestControllerShould.return_an_existent_pokemon" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="codesai.spring.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Spring4Rest" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="codesai.spring.controller" />
-      <option name="MAIN_CLASS_NAME" value="codesai.spring.controller.PokemonsRestControllerShould" />
-      <option name="METHOD_NAME" value="return_an_existent_pokemon" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="PokemonsRestControllerShould.return_not_found_when_there_is_no_podemon_with_this_id" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="codesai.spring.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Spring4Rest" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="codesai.spring.controller" />
-      <option name="MAIN_CLASS_NAME" value="codesai.spring.controller.PokemonsRestControllerShould" />
-      <option name="METHOD_NAME" value="return_not_found_when_there_is_no_podemon_with_this_id" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.PokemonsRestControllerShould">
     <configuration default="false" name="PokemonsRestControllerShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -421,7 +259,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="PokemonsRestControllerShould.create_a_new_pokemon" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="PokemonsRestControllerShould.return_bad_request_when_try_to_update_a_pokemon_with_bad_description" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="codesai.spring.controller.*" />
@@ -433,7 +271,85 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="codesai.spring.controller" />
       <option name="MAIN_CLASS_NAME" value="codesai.spring.controller.PokemonsRestControllerShould" />
-      <option name="METHOD_NAME" value="create_a_new_pokemon" />
+      <option name="METHOD_NAME" value="return_bad_request_when_try_to_update_a_pokemon_with_bad_description" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="PokemonsRestControllerShould.return_bad_request_when_try_to_update_a_pokemon_with_bad_name" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="codesai.spring.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Spring4Rest" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="codesai.spring.controller" />
+      <option name="MAIN_CLASS_NAME" value="codesai.spring.controller.PokemonsRestControllerShould" />
+      <option name="METHOD_NAME" value="return_bad_request_when_try_to_update_a_pokemon_with_bad_name" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="PokemonsRestControllerShould.return_bad_request_when_try_to_create_a_pokemon_without_primary_type" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="codesai.spring.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Spring4Rest" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="codesai.spring.controller" />
+      <option name="MAIN_CLASS_NAME" value="codesai.spring.controller.PokemonsRestControllerShould" />
+      <option name="METHOD_NAME" value="return_bad_request_when_try_to_create_a_pokemon_without_primary_type" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="PokemonsRestControllerShould.return_bad_request_when_try_to_edit_a_pokemon_withouth_primary_type" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="codesai.spring.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Spring4Rest" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="codesai.spring.controller" />
+      <option name="MAIN_CLASS_NAME" value="codesai.spring.controller.PokemonsRestControllerShould" />
+      <option name="METHOD_NAME" value="return_bad_request_when_try_to_edit_a_pokemon_withouth_primary_type" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -684,19 +600,21 @@
       </MavenSettings>
       <method />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Maven.Unnamed" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.PokemonsRestControllerShould.return_an_existent_pokemon" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.PokemonsRestControllerShould.return_not_found_when_there_is_no_podemon_with_this_id" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.PokemonsRestControllerShould" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.PokemonsRestControllerShould.create_a_new_pokemon" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.PokemonsRestControllerShould" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.PokemonsRestControllerShould.return_bad_request_when_try_to_update_a_pokemon_with_bad_description" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.PokemonsRestControllerShould.return_bad_request_when_try_to_update_a_pokemon_with_bad_name" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.PokemonsRestControllerShould.return_bad_request_when_try_to_create_a_pokemon_without_primary_type" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.PokemonsRestControllerShould.return_bad_request_when_try_to_edit_a_pokemon_withouth_primary_type" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.PokemonsRestControllerShould.create_a_new_pokemon" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.PokemonsRestControllerShould" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.PokemonsRestControllerShould.return_not_found_when_there_is_no_podemon_with_this_id" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.PokemonsRestControllerShould.return_an_existent_pokemon" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.PokemonsRestControllerShould" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.PokemonsRestControllerShould.return_bad_request_when_try_to_edit_a_pokemon_withouth_primary_type" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.PokemonsRestControllerShould.return_bad_request_when_try_to_create_a_pokemon_without_primary_type" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.PokemonsRestControllerShould.return_bad_request_when_try_to_update_a_pokemon_with_bad_name" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.PokemonsRestControllerShould.return_bad_request_when_try_to_update_a_pokemon_with_bad_description" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
@@ -717,23 +635,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PokemonsRestControllerShould - 2016.10.31 at 15h 51m 02s.xml">
+    <history-entry file="PokemonsRestControllerShould - 2016.10.31 at 16h 53m 49s.xml">
       <configuration name="PokemonsRestControllerShould" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokemonsRestControllerShould_create_a_new_pokemon - 2016.10.31 at 16h 16m 59s.xml">
-      <configuration name="PokemonsRestControllerShould.create_a_new_pokemon" configurationId="JUnit" />
+    <history-entry file="PokemonsRestControllerShould - 2016.10.31 at 16h 54m 21s.xml">
+      <configuration name="PokemonsRestControllerShould" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokemonsRestControllerShould_create_a_new_pokemon - 2016.10.31 at 16h 19m 44s.xml">
-      <configuration name="PokemonsRestControllerShould.create_a_new_pokemon" configurationId="JUnit" />
+    <history-entry file="PokemonsRestControllerShould - 2016.10.31 at 17h 08m 07s.xml">
+      <configuration name="PokemonsRestControllerShould" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokemonsRestControllerShould_return_an_existent_pokemon - 2016.10.31 at 15h 49m 11s.xml">
-      <configuration name="PokemonsRestControllerShould.return_an_existent_pokemon" configurationId="JUnit" />
+    <history-entry file="PokemonsRestControllerShould - 2016.10.31 at 17h 08m 53s.xml">
+      <configuration name="PokemonsRestControllerShould" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokemonsRestControllerShould_return_an_existent_pokemon - 2016.10.31 at 15h 49m 59s.xml">
-      <configuration name="PokemonsRestControllerShould.return_an_existent_pokemon" configurationId="JUnit" />
+    <history-entry file="PokemonsRestControllerShould_return_bad_request_when_try_to_create_a_pokemon_without_primary_type - 2016.10.31 at 17h 02m 52s.xml">
+      <configuration name="PokemonsRestControllerShould.return_bad_request_when_try_to_create_a_pokemon_without_primary_type" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokemonsRestControllerShould_return_not_found_when_there_is_no_podemon_with_this_id - 2016.10.31 at 15h 50m 58s.xml">
-      <configuration name="PokemonsRestControllerShould.return_not_found_when_there_is_no_podemon_with_this_id" configurationId="JUnit" />
+    <history-entry file="PokemonsRestControllerShould_return_bad_request_when_try_to_create_a_pokemon_without_primary_type - 2016.10.31 at 17h 04m 51s.xml">
+      <configuration name="PokemonsRestControllerShould.return_bad_request_when_try_to_create_a_pokemon_without_primary_type" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokemonsRestControllerShould_return_bad_request_when_try_to_edit_a_pokemon_withouth_primary_type - 2016.10.31 at 17h 08m 49s.xml">
+      <configuration name="PokemonsRestControllerShould.return_bad_request_when_try_to_edit_a_pokemon_withouth_primary_type" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokemonsRestControllerShould_return_bad_request_when_try_to_update_a_pokemon_with_bad_description - 2016.10.31 at 16h 52m 08s.xml">
+      <configuration name="PokemonsRestControllerShould.return_bad_request_when_try_to_update_a_pokemon_with_bad_description" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokemonsRestControllerShould_return_bad_request_when_try_to_update_a_pokemon_with_bad_name - 2016.10.31 at 16h 54m 47s.xml">
+      <configuration name="PokemonsRestControllerShould.return_bad_request_when_try_to_update_a_pokemon_with_bad_name" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokemonsRestControllerShould_return_not_found_when_try_to_edit_a_pokemon_that_does_not_exists - 2016.10.31 at 16h 50m 53s.xml">
+      <configuration name="PokemonsRestControllerShould.return_not_found_when_try_to_edit_a_pokemon_that_does_not_exists" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -746,10 +676,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31681415" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31681415" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24920128" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24920128" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -838,15 +768,31 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/codesai/spring/repositories/PokemonRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/codesai/spring/controller/PokemonRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="52" column="110" selection-start-line="52" selection-start-column="110" selection-end-line="52" selection-end-column="110" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/codesai/spring/model/Pokemon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        <state relative-caret-position="495">
+          <caret line="75" column="46" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
           <folding>
             <element signature="e#912#913#0" expanded="true" />
             <element signature="e#937#938#0" expanded="true" />
@@ -860,30 +806,21 @@
             <element signature="e#1239#1240#0" expanded="true" />
             <element signature="e#1285#1286#0" expanded="true" />
             <element signature="e#1316#1317#0" expanded="true" />
+            <element signature="e#1349#1350#0" expanded="true" />
+            <element signature="e#1428#1429#0" expanded="true" />
+            <element signature="e#1532#1533#0" expanded="true" />
+            <element signature="e#1573#1574#0" expanded="true" />
+            <element signature="e#1635#1636#0" expanded="true" />
+            <element signature="e#1669#1670#0" expanded="true" />
+            <element signature="e#1714#1715#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/codesai/spring/controller/PokemonRestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/codesai/spring/repositories/PokemonRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/codesai/spring/controller/PokemonsRestControllerShould.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
+        <state relative-caret-position="1695">
+          <caret line="124" column="88" selection-start-line="124" selection-start-column="88" selection-end-line="124" selection-end-column="88" />
           <folding />
         </state>
       </provider>
