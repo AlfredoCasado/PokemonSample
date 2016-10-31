@@ -1,11 +1,11 @@
 * El servicio Rest se ha realizado con spring MVC 4
-* Se ha utilizado java-based config en lugar de ficheros .xml que permite esta versión de spring.
-* Existe un fichero de test PokemonRestController.java que incluye tests para toda la funcionalidad.
+* Se ha utilizado java-based config en lugar de ficheros .xml
+* Existe un fichero de test PokemonsRestControllerShould.java que incluye test para el api rest.
 * El repositorio para guardar pokemon utiliza una lista de pokemos en memoria, no se ha desarrollado la parte
 de persistencia, pero el diseño permitiría añadirla muy facilmente.
 * No se ha desarrolado una capa de servicios u otro tipo de arquitectura (hexagonal, clean architecture u otras) dado
 que el problema con los requisitos actuales es un simple CRUD. Esto implica que algunos controladores tiene algo de lógica
-y acceden directamente al repositorio, algo desaconsejaple para problemas más complejos.
+y acceden directamente al repositorio, algo desaconsejable para problemas más complejos.
 
 Para ejecutar la aplicación se ha incluido en el pom.xml el plugin de tomcat que permite ejecutar la app en un tomcat
 embebido, simplemente ejecutando:
