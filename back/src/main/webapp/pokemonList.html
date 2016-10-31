@@ -1,7 +1,10 @@
 <h2>Pokemon List</h2>
 <div>
+  <label>Search: <input type="text" ng-model="$ctrl.searchText"></label>
+
   <table>
-    <tr ng-repeat="p in $ctrl.list track by $index">
+    <tr><th>Favorite</th><th>Name</th></tr>
+    <tr ng-repeat="p in $ctrl.list track by p.id | filter: $ctrl.searchText">
       <td><span ng-show="{{p.favorite}}">&#9733;</span></td>
       <td>{{ p.name }}</td>
       <td><button ng-click="$ctrl.onView({id: p.id})">View</button></td>
