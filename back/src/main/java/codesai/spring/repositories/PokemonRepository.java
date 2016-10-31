@@ -31,10 +31,10 @@ public class PokemonRepository {
 		return null;
 	}
 
-	public Pokemon create(Pokemon customer) {
-		customer.setId(java.util.UUID.randomUUID().toString());
-		pokemons.add(customer);
-		return customer;
+	public Pokemon create(Pokemon pokemon) {
+		pokemon.setId(java.util.UUID.randomUUID().toString());
+		pokemons.add(pokemon);
+		return pokemon;
 	}
 
 	public String delete(String id) {
@@ -48,14 +48,14 @@ public class PokemonRepository {
 		return null;
 	}
 
-	public Pokemon update(String id, Pokemon customer) {
+	public Pokemon update(String id, Pokemon pokemon) {
 
 		for (Pokemon c : pokemons) {
 			if (c.getId().equals(id)) {
-				customer.setId(c.getId());
+				pokemon.setId(c.getId());
 				pokemons.remove(c);
-				pokemons.add(customer);
-				return customer;
+				pokemons.add(pokemon);
+				return pokemon;
 			}
 		}
 

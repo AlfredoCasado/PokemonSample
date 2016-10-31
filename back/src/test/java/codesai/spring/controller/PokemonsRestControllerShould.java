@@ -156,4 +156,36 @@ public class PokemonsRestControllerShould {
         Assert.assertThat(response.getStatusCode(), is(HttpStatus.NOT_FOUND));
     }
 
+    @Test
+    public void set_a_pokemon_as_one_of_my_favorites() {
+        inMemoryRepository.pokemons.add(new Pokemon("1", "pokemonName", validDescription,"electrico","", false));
+
+        ResponseEntity response = pokemonRestController.setAsFavorite("1");
+
+        Assert.assertThat(inMemoryRepository.get("1").isFavorite(), is(true));
+    }
+
+    @Test
+    public void return_not_found_when_try_to_favorite_a_pokemon_that_not_exist() {
+        ResponseEntity response = pokemonRestController.setAsFavorite("1");
+
+        Assert.assertThat(response.getStatusCode(), is(HttpStatus.NOT_FOUND));
+    }
+
+    @Test
+    public void return_bad_request_when_try_to_favorite_more_than_10_pokemons() {
+        addTenPokemonsAsFavorite();
+        inMemoryRepository.pokemons.add(new Pokemon("11", "pokemonName", validDescription,"electrico","", false));
+
+        ResponseEntity response = pokemonRestController.setAsFavorite("1");
+
+        Assert.assertThat(response.getStatusCode(), is(HttpStatus.BAD_REQUEST));
+    }
+
+    private void addTenPokemonsAsFavorite() {
+        for (int i = 0; i<10; i++) {
+            inMemoryRepository.pokemons.add(new Pokemon(java.util.UUID.randomUUID().toString(), "aName", validDescription,"electrico","", true));
+        }
+    }
+
 }
