@@ -57,10 +57,8 @@
     ctrl.delete = function(pokemon) {
       ctrl.httpService.delete('/pokemons/' + pokemon.id)
         .then(function successCallback(response) {
+            ctrl.load();
         })
-        .catch(function errorCallback(response) {
-        });
-      ctrl.load();
     }
 
     ctrl.favorite = function(pokemon) {
