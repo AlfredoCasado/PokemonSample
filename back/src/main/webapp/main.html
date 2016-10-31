@@ -11,5 +11,6 @@
 </pokemon-detail>
 
 <pokemon-list ng-if="!$ctrl.showDetail" list="$ctrl.list"
-              on-view="$ctrl.viewPokemon(id)">
+              on-view="$ctrl.view(id)"
+              on-delete="$ctrl.delete(pokemon)">
 </pokemon-list>

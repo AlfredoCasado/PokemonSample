@@ -25,7 +25,7 @@
         });
     };
 
-    ctrl.viewPokemon = function(id) {
+    ctrl.view = function(id) {
       ctrl.$http.get(ctrl.root + '/pokemons/' + id)
         .then(function successCallback(response) {
           ctrl.showDetail = true;
@@ -56,6 +56,20 @@
         });
 
     }
+
+    ctrl.delete = function(pokemon) {
+
+      ctrl.$http.delete(ctrl.root + '/pokemons/' + pokemon.id)
+        .then(function successCallback(response) {
+          console.log('ok');
+        }, function errorCallback(response) {
+          // called asynchronously if an error occurs
+          // or server returns response with an error status.
+
+          console.error(response);
+          ctrl.load();
+        });
+    }
   }
 
 
@@ -78,7 +92,8 @@
       templateUrl: 'pokemonList.html',
       bindings: {
         list: '<',
-        onView: '&'
+        onView: '&',
+        onDelete: '&'
       }
     })
     .component('pokemonDetail', {

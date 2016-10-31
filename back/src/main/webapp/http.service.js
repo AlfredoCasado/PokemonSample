@@ -22,7 +22,6 @@
       };
     };
 
-
     ctrl.get = ctrl.httpMethod('get');
     ctrl.post = ctrl.httpMethod('post');
     ctrl.put = ctrl.httpMethod('put');
@@ -32,8 +31,6 @@
     ctrl.apiUrl = 'http://localhost:8080/springrest';
 
     ctrl.$log.log(`[HttpService] api url points to '${ctrl.apiUrl}'`);
-
-
   }
 
   angular

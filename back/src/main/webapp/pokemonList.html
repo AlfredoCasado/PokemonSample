@@ -5,6 +5,7 @@
       <td><span ng-show="{{p.favorite}}">&#9733;</span></td>
       <td>{{ p.name }}</td>
       <td><button ng-click="$ctrl.onView({id: p.id})">View</button></td>
+      <td><button ng-click="$ctrl.onDelete({pokemon: p})">Delete</button></td>
     </tr>
   </table>
 </div>
