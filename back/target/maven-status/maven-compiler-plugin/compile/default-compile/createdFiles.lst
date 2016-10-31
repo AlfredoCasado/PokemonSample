@@ -1,0 +1,5 @@
+codesai/spring/controller/PokemonRestController.class
+codesai/spring/repositories/PokemonRepository.class
+codesai/spring/config/MvcConfig.class
+codesai/spring/config/AppInitializer.class
+codesai/spring/model/Pokemon.class
