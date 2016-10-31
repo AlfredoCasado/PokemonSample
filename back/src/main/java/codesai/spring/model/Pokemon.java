@@ -8,14 +8,16 @@ public class Pokemon {
 	private String primaryType;
 	private String secondaryType;
 	private boolean favorite;
+	private String evolution;
 
-	public Pokemon(String id, String name, String description, String primaryType, String secondaryType, boolean favorite) {
+	public Pokemon(String id, String name, String description, String primaryType, String secondaryType, boolean favorite, String evolution) {
 		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.primaryType = primaryType;
 		this.secondaryType = secondaryType;
 		this.favorite = favorite;
+		this.evolution = evolution;
 	}
 
 	public Pokemon() {}
@@ -82,6 +84,16 @@ public class Pokemon {
 	}
 
 	private boolean invalidName() {
-		return name == null || "".equals(name);
+		return name == null || name.length() < 4 || name.length() > 24;
 	}
+
+	public String getEvolution() {
+		return evolution;
+	}
+
+	public void setEvolution(String evolution) {
+		this.evolution = evolution;
+	}
+
+
 }
