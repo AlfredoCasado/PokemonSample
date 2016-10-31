@@ -1,0 +1,27 @@
+<div>
+  <h2>New Pokemon</h2>
+  <form>
+    <div>
+      <label>Name</label>
+      <input type="text" placeholder="Name" ng-model="p.name">
+    </div>
+    <div>
+      <label>Description</label>
+      <input type="description" placeholder="Description" ng-model="p.description">
+    </div>
+
+    <div>
+      <label>Primary type</label>
+      <input type="text" placeholder="Primary Type" ng-model="p.primaryType">
+    </div>
+
+    <div>
+      <label>Secondary type</label>
+      <input type="text" placeholder="Secondary Type" ng-model="p.secondaryType">
+    </div>
+
+    <div>
+      <input type="submit" ng-click="$ctrl.create(p)">
+    </div>
+  </form>
+</div>
