@@ -70,7 +70,11 @@ public class Pokemon {
 
 
 	public boolean isNotValid() {
-		return invalidName() || invalidDescription();
+		return invalidName() || invalidDescription() || doesNotHavePrimaryType();
+	}
+
+	private boolean doesNotHavePrimaryType() {
+		return primaryType == null || "".equals(primaryType);
 	}
 
 	private boolean invalidDescription() {

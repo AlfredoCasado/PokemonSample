@@ -80,6 +80,15 @@ public class PokemonsRestControllerShould {
     }
 
     @Test
+    public void return_bad_request_when_try_to_create_a_pokemon_without_primary_type() {
+        Pokemon pokemon = new Pokemon("pokemonid", "valid name", validDescription, "", "SecondaryType", true);
+
+        ResponseEntity response = pokemonRestController.createPokemon(pokemon);
+
+        Assert.assertThat(response.getStatusCode(), is(HttpStatus.BAD_REQUEST));
+    }
+
+    @Test
     public void update_a_pokemon() {
         Pokemon originalPokemon = new Pokemon("1", "pokemonName", validDescription,"electrico","", false);
         PokemonRepository.pokemons.add(originalPokemon);
@@ -103,6 +112,17 @@ public class PokemonsRestControllerShould {
         PokemonRepository.pokemons.add(originalPokemon);
 
         Pokemon updatedPokemon = new Pokemon("1", "updatedName", "invalid description","electrico","", false);
+        ResponseEntity response = pokemonRestController.updatePokemon("1", updatedPokemon);
+
+        Assert.assertThat(response.getStatusCode(), is(HttpStatus.BAD_REQUEST));
+    }
+
+    @Test
+    public void return_bad_request_when_try_to_edit_a_pokemon_withouth_primary_type() {
+        Pokemon originalPokemon = new Pokemon("1", "pokemonName", validDescription,"electrico","", false);
+        PokemonRepository.pokemons.add(originalPokemon);
+
+        Pokemon updatedPokemon = new Pokemon("1", "updatedName", "invalid description","","", false);
         ResponseEntity response = pokemonRestController.updatePokemon("1", updatedPokemon);
 
         Assert.assertThat(response.getStatusCode(), is(HttpStatus.BAD_REQUEST));
