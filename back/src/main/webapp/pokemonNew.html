@@ -3,19 +3,25 @@
   <form name="form" novalidate>
     <div>
       <label>Name</label>
-      <input type="text" placeholder="Name" ng-model="p.name" maxlength="24"
+      <input name="name" type="text" placeholder="Name" ng-model="p.name" maxlength="24"
              ng-minlength="4" required>
+      <span class="error" ng-show="form.name.$error.required">Required!</span>
+      <span class="error" ng-show="form.name.$error.minlength">Too short!</span>
     </div>
+
     <div>
       <label>Description</label>
-      <input type="description" placeholder="Description"
+      <input name="description" type="description" placeholder="Description"
              ng-model="p.description" ng-minlength="30" required>
+      <span class="error" ng-show="form.description.$error.required">Required!</span>
+      <span class="error" ng-show="form.description.$error.minlength">Too short!</span>
     </div>
 
     <div>
       <label>Primary type</label>
-      <input type="text" placeholder="Primary Type" ng-model="p.primaryType"
+      <input name="primarytype" type="text" placeholder="Primary Type" ng-model="p.primaryType"
              required>
+      <span class="error" ng-show="form.primarytype.$error.required">Required!</span>
     </div>
 
     <div>
@@ -35,6 +41,11 @@
 
     <div>
       <input type="submit" ng-click="$ctrl.create(p)" ng-disabled="!form.$valid">
+    </div>
+
+    <div>
+      <h3>Error from $form directive</h3>
+      <span>{{ form.$error }}</span>
     </div>
   </form>
 </div>
