@@ -38,6 +38,10 @@ public class PokemonRestController {
     @PostMapping(value = "/pokemons")
     public ResponseEntity createPokemon(@RequestBody Pokemon pokemon) {
 
+        if (pokemon.isNotValid()) {
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
+        }
+
         pokemonRepository.create(pokemon);
 
         return new ResponseEntity(pokemon, HttpStatus.OK);

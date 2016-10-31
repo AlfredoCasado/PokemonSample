@@ -69,4 +69,15 @@ public class Pokemon {
 	}
 
 
+	public boolean isNotValid() {
+		return invalidName() || invalidDescription();
+	}
+
+	private boolean invalidDescription() {
+		return description == null || description.length() < 30;
+	}
+
+	private boolean invalidName() {
+		return name == null || "".equals(name);
+	}
 }
