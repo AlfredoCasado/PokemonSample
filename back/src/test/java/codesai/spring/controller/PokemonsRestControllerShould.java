@@ -14,14 +14,33 @@ import static org.hamcrest.CoreMatchers.is;
 public class PokemonsRestControllerShould {
 
     PokemonRepository inMemoryRepository = new PokemonRepository();
-    PokemonRestController customerController = new PokemonRestController(inMemoryRepository);
+    PokemonRestController pokemonRestController = new PokemonRestController(inMemoryRepository);
 
     @Test
     public void return_all_customers() {
-        List<Pokemon> customers = customerController.getPokemons();
+        List<Pokemon> customers = pokemonRestController.getPokemons();
 
         Assert.assertThat(customers.size(), is(3));
     }
+
+    @Test
+    public void return_an_existent_pokemon() {
+        PokemonRepository.pokemons.add(new Pokemon("1", "pokemonName", "pokemonDescription"));
+
+        ResponseEntity response = pokemonRestController.getPokemon("1");
+
+        Assert.assertThat(((Pokemon) response.getBody()).getName(), is("pokemonName"));
+        Assert.assertThat(response.getStatusCode(), is(HttpStatus.OK));
+    }
+
+    @Test
+    public void return_not_found_when_there_is_no_podemon_with_this_id() {
+        ResponseEntity response = pokemonRestController.getPokemon("badPodemonId");
+
+        Assert.assertThat(response.getStatusCode(), is(HttpStatus.NOT_FOUND));
+    }
+
+
 
 
 

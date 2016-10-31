@@ -9,21 +9,21 @@ import org.springframework.stereotype.Component;
 @Component
 public class PokemonRepository {
 
-	private static List<Pokemon> customers;
-	{
-		customers = new ArrayList();
-		customers.add(new Pokemon(java.util.UUID.randomUUID().toString(), "pikachu", "gato electrico"));
-		customers.add(new Pokemon(java.util.UUID.randomUUID().toString(), "Bulbasaur", "otro tipo de pokemon"));
-		customers.add(new Pokemon(java.util.UUID.randomUUID().toString(), "Ivysaur", "este ni idea como es"));
+	public static List<Pokemon> pokemons;
+	static {
+		pokemons = new ArrayList();
+		pokemons.add(new Pokemon(java.util.UUID.randomUUID().toString(), "pikachu", "gato electrico"));
+		pokemons.add(new Pokemon(java.util.UUID.randomUUID().toString(), "Bulbasaur", "otro tipo de pokemon"));
+		pokemons.add(new Pokemon(java.util.UUID.randomUUID().toString(), "Ivysaur", "este ni idea como es"));
 	}
 
 	public List list() {
-		return customers;
+		return pokemons;
 	}
 
 	public Pokemon get(String id) {
 
-		for (Pokemon c : customers) {
+		for (Pokemon c : pokemons) {
 			if (c.getId().equals(id)) {
 				return c;
 			}
@@ -33,15 +33,15 @@ public class PokemonRepository {
 
 	public Pokemon create(Pokemon customer) {
 		customer.setId(java.util.UUID.randomUUID().toString());
-		customers.add(customer);
+		pokemons.add(customer);
 		return customer;
 	}
 
 	public String delete(String id) {
 
-		for (Pokemon c : customers) {
+		for (Pokemon c : pokemons) {
 			if (c.getId().equals(id)) {
-				customers.remove(c);
+				pokemons.remove(c);
 				return id;
 			}
 		}
@@ -51,11 +51,11 @@ public class PokemonRepository {
 
 	public Pokemon update(String id, Pokemon customer) {
 
-		for (Pokemon c : customers) {
+		for (Pokemon c : pokemons) {
 			if (c.getId().equals(id)) {
 				customer.setId(c.getId());
-				customers.remove(c);
-				customers.add(customer);
+				pokemons.remove(c);
+				pokemons.add(customer);
 				return customer;
 			}
 		}
