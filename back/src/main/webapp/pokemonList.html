@@ -1,3 +1,14 @@
-<h1>POKEMON LIST</h1>
+<h1>POKEMON</h1>
+<div>
+  <button ng-click="$ctrl.new()">New</button>
+</div>
 
-Todo...
+<h2>Pokemon List</h2>
+<div>
+  <table>
+    <tr ng-repeat="p in $ctrl.list track by $index">
+      <td>{{ p.name }}</td>
+      <td><button ng-click="$ctrl.view(p)">View</button></td>
+    </tr>
+  </table>
+</div>
