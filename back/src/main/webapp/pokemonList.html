@@ -6,7 +6,7 @@
     <tr><th>Favorite</th><th>Name</th></tr>
     <tr ng-repeat="p in $ctrl.list track by p.id | filter: $ctrl.searchText">
       <td>
-        <a href ng-click="$ctrl.onFavorite({id: p.id})">
+        <a href ng-click="$ctrl.favorite(p)">
           <span ng-show="{{p.favorite}}">&#9733;</span>
           <span ng-show="{{!p.favorite}}">&#9734;</span>
         </a>

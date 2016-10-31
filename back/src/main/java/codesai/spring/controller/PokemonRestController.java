@@ -18,7 +18,7 @@ public class PokemonRestController {
     public PokemonRestController(PokemonRepository pokemonRepository) {
         this.pokemonRepository = pokemonRepository;
     }
-	
+
 	@GetMapping("/pokemons")
 	public List getPokemons() {
 		return pokemonRepository.list();
@@ -83,7 +83,7 @@ public class PokemonRestController {
             return new ResponseEntity("No pokemon found for ID " + id, HttpStatus.NOT_FOUND);
         }
 
-        pokemon.setFavorite(true);
+        pokemon.setFavorite(!pokemon.isFavorite());
         pokemonRepository.update(pokemon.getId(), pokemon);
 
         return new ResponseEntity(HttpStatus.OK);

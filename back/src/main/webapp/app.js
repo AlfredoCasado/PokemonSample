@@ -42,11 +42,8 @@
     };
 
     ctrl.create = function(pokemon) {
-      console.log("up:", pokemon);
-
       ctrl.httpService.post('/pokemons', pokemon)
         .then(function successCallback(response) {
-          console.log('ok');
           ctrl.showNew = false;
           ctrl.load();
         })
@@ -66,7 +63,14 @@
       ctrl.load();
     }
 
-    ctrl.favorite = function(id) {
+    ctrl.favorite = function(pokemon) {
+      ctrl.httpService.put('/pokemons/' + pokemon.id + '/favorite')
+        .then(function successCallback(response) {
+          console.log('favorite edited');
+          ctrl.load();
+        })
+        .catch(function errorCallback(response) {
+        });
     }
   }
 
@@ -75,8 +79,6 @@
     var ctrl = this;
 
     ctrl.create = function(pokemon) {
-      console.log(pokemon);
-
       ctrl.onCreate({pokemon: pokemon});
     };
   }
@@ -93,6 +95,13 @@
         onView: '&',
         onDelete: '&',
         onFavorite: '&'
+      },
+      controller: function() {
+        var ctrl = this;
+
+        ctrl.favorite = function(pokemon) {
+          ctrl.onFavorite({pokemon: pokemon});
+        }
       }
     })
     .component('pokemonDetail', {
