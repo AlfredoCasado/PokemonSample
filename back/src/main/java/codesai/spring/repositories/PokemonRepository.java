@@ -38,7 +38,6 @@ public class PokemonRepository {
 	}
 
 	public String delete(String id) {
-
 		for (Pokemon c : pokemons) {
 			if (c.getId().equals(id)) {
 				pokemons.remove(c);

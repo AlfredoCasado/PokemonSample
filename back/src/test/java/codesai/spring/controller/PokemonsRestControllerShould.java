@@ -79,5 +79,44 @@ public class PokemonsRestControllerShould {
         Assert.assertThat(response.getStatusCode(), is(HttpStatus.BAD_REQUEST));
     }
 
+    @Test
+    public void update_a_pokemon() {
+        Pokemon originalPokemon = new Pokemon("1", "pokemonName", validDescription,"electrico","", false);
+        PokemonRepository.pokemons.add(originalPokemon);
+
+        Pokemon updatedPokemon = new Pokemon("1", "updatedName", validDescription,"electrico","", false);
+        pokemonRestController.updatePokemon("1", updatedPokemon);
+
+        Assert.assertThat(inMemoryRepository.get("1").getName(), is("updatedName"));
+    }
+
+    @Test
+    public void return_not_found_when_try_to_edit_a_pokemon_that_does_not_exists() {
+        ResponseEntity response = pokemonRestController.updatePokemon("1", new Pokemon("1", "pokemonName", validDescription,"electrico","", false));
+
+        Assert.assertThat(response.getStatusCode(), is(HttpStatus.NOT_FOUND));
+    }
+
+    @Test
+    public void return_bad_request_when_try_to_update_a_pokemon_with_bad_description() {
+        Pokemon originalPokemon = new Pokemon("1", "pokemonName", validDescription,"electrico","", false);
+        PokemonRepository.pokemons.add(originalPokemon);
+
+        Pokemon updatedPokemon = new Pokemon("1", "updatedName", "invalid description","electrico","", false);
+        ResponseEntity response = pokemonRestController.updatePokemon("1", updatedPokemon);
+
+        Assert.assertThat(response.getStatusCode(), is(HttpStatus.BAD_REQUEST));
+    }
+
+    @Test
+    public void return_bad_request_when_try_to_update_a_pokemon_with_bad_name() {
+        Pokemon originalPokemon = new Pokemon("1", "pokemonName", validDescription,"electrico","", false);
+        PokemonRepository.pokemons.add(originalPokemon);
+
+        Pokemon updatedPokemon = new Pokemon("1", "", validDescription,"electrico","", false);
+        ResponseEntity response = pokemonRestController.updatePokemon("1", updatedPokemon);
+
+        Assert.assertThat(response.getStatusCode(), is(HttpStatus.BAD_REQUEST));
+    }
 
 }

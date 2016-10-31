@@ -35,14 +35,22 @@ public class PokemonRestController {
         return new ResponseEntity(pokemon, HttpStatus.OK);
     }
 
-    @PostMapping(value = "/pokemons")
+    @PostMapping("/pokemons")
     public ResponseEntity createPokemon(@RequestBody Pokemon pokemon) {
-
-        if (pokemon.isNotValid()) {
-            return new ResponseEntity(HttpStatus.BAD_REQUEST);
-        }
+        if (pokemon.isNotValid()) return new ResponseEntity(HttpStatus.BAD_REQUEST);
 
         pokemonRepository.create(pokemon);
+
+        return new ResponseEntity(pokemon, HttpStatus.OK);
+    }
+
+    @PutMapping("/customers/{id}")
+    public ResponseEntity updatePokemon(@PathVariable String id, @RequestBody Pokemon pokemon) {
+        if (pokemon.isNotValid()) return new ResponseEntity(HttpStatus.BAD_REQUEST);
+
+        pokemon = pokemonRepository.update(id, pokemon);
+
+        if (null == pokemon) return new ResponseEntity("No pokemon found for ID " + id, HttpStatus.NOT_FOUND);
 
         return new ResponseEntity(pokemon, HttpStatus.OK);
     }
