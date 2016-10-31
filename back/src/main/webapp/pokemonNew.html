@@ -1,20 +1,21 @@
 <div>
   <h2>New Pokemon</h2>
-  <form>
+  <form name="form" novalidate>
     <div>
       <label>Name</label>
       <input type="text" placeholder="Name" ng-model="p.name" maxlength="24"
-             ng-minlength="4" >
+             ng-minlength="4" required>
     </div>
     <div>
       <label>Description</label>
-      <input type="description" placeholder="Description" ng-model="p.description"
-             ng-minlength="30">
+      <input type="description" placeholder="Description"
+             ng-model="p.description" ng-minlength="30" required>
     </div>
 
     <div>
       <label>Primary type</label>
-      <input type="text" placeholder="Primary Type" ng-model="p.primaryType">
+      <input type="text" placeholder="Primary Type" ng-model="p.primaryType"
+             required>
     </div>
 
     <div>
@@ -23,7 +24,12 @@
     </div>
 
     <div>
-      <input type="submit" ng-click="$ctrl.create(p)">
+      <label>Favorite</label>
+      <input type="checkbox" placeholder="Favorite" ng-model="p.favorite">
+    </div>
+
+    <div>
+      <input type="submit" ng-click="$ctrl.create(p)" ng-disabled="!form.$valid">
     </div>
   </form>
 </div>
