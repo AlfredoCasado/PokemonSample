@@ -37,6 +37,9 @@ public class PokemonRestController {
 
     @PostMapping("/pokemons")
     public ResponseEntity createPokemon(@RequestBody Pokemon pokemon) {
+        if (alreadyHaveTenFavorites() && pokemon.isFavorite()) {
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
+        }
         if (pokemon.isNotValid()) return new ResponseEntity(HttpStatus.BAD_REQUEST);
 
         pokemonRepository.create(pokemon);
@@ -48,10 +51,13 @@ public class PokemonRestController {
     public ResponseEntity updatePokemon(@PathVariable String id, @RequestBody Pokemon pokemon) {
         if (pokemon.isNotValid()) return new ResponseEntity(HttpStatus.BAD_REQUEST);
 
+        Pokemon beforeUpdate = pokemonRepository.get(id);
+        if (null == beforeUpdate) return new ResponseEntity("No pokemon found for ID " + id, HttpStatus.NOT_FOUND);
+        if (alreadyHaveTenFavorites() && pokemon.isFavorite() && !beforeUpdate.isFavorite()) {
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
+        }
+
         pokemon = pokemonRepository.update(id, pokemon);
-
-        if (null == pokemon) return new ResponseEntity("No pokemon found for ID " + id, HttpStatus.NOT_FOUND);
-
         return new ResponseEntity(pokemon, HttpStatus.OK);
     }
 
