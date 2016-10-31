@@ -62,7 +62,7 @@ public class PokemonRestController {
             return new ResponseEntity("No pokemon found for ID " + id, HttpStatus.NOT_FOUND);
         }
 
-        return new ResponseEntity(id, HttpStatus.OK);
+        return new ResponseEntity(HttpStatus.OK);
 
     }
 
