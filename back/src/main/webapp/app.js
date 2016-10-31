@@ -1,16 +1,16 @@
 (function(angular) {
   'use strict';
 
-  function Main($http) {
+  function MainController($http) {
     var ctrl = this;
     ctrl.$http = $http;
 
     ctrl.list = ['Loading...'];
-    ctrl.root = 'http://localhost:8080/springrest'
+    ctrl.root = 'http://localhost:8080/springrest';
 
     ctrl.$onInit = function() {
       ctrl.load();
-    }
+    };
 
     ctrl.load = function() {
       ctrl.$http.get(ctrl.root + '/pokemons')
@@ -21,17 +21,18 @@
           // called asynchronously if an error occurs
           // or server returns response with an error status.
         });
-    }
+    };
 
-    ctrl.onView = function(id) {
-      console.log('onView' + id);
-    }
+    ctrl.viewPokemon = function(id) {
+      console.log(id);
+      var i = id;
+    };
   }
 
   angular.module('app', [])
     .component('main', {
       templateUrl: 'main.html',
-      controller: Main
+      controller: MainController
     })
     .component('pokemonList', {
       templateUrl: 'pokemonList.html',
