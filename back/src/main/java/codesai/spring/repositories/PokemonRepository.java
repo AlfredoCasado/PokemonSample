@@ -12,9 +12,9 @@ public class PokemonRepository {
 	public static List<Pokemon> pokemons;
 	static {
 		pokemons = new ArrayList();
-		pokemons.add(new Pokemon(java.util.UUID.randomUUID().toString(), "pikachu", "gato electrico"));
-		pokemons.add(new Pokemon(java.util.UUID.randomUUID().toString(), "Bulbasaur", "otro tipo de pokemon"));
-		pokemons.add(new Pokemon(java.util.UUID.randomUUID().toString(), "Ivysaur", "este ni idea como es"));
+		pokemons.add(new Pokemon(java.util.UUID.randomUUID().toString(), "pikachu", "gato electrico","electrico","", false));
+		pokemons.add(new Pokemon(java.util.UUID.randomUUID().toString(), "Bulbasaur", "otro tipo de pokemon","electrico","", false));
+		pokemons.add(new Pokemon(java.util.UUID.randomUUID().toString(), "Ivysaur", "este ni idea como es","electrico","", false));
 	}
 
 	public List list() {

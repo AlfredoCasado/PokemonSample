@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.core.IsNot.not;
 
 public class PokemonsRestControllerShould {
 
@@ -25,7 +26,7 @@ public class PokemonsRestControllerShould {
 
     @Test
     public void return_an_existent_pokemon() {
-        PokemonRepository.pokemons.add(new Pokemon("1", "pokemonName", "pokemonDescription"));
+        PokemonRepository.pokemons.add(new Pokemon("1", "pokemonName", "pokemonDescription","electrico","", false));
 
         ResponseEntity response = pokemonRestController.getPokemon("1");
 
@@ -41,6 +42,15 @@ public class PokemonsRestControllerShould {
     }
 
 
+    @Test
+    public void create_a_new_pokemon() {
+        inMemoryRepository.pokemons.clear();
+        Pokemon pokemon = new Pokemon("pokemonid", "pokemonName", "pokemonDescription", "PrimaryType", "SecondaryType", true);
+
+        pokemonRestController.createPokemon(pokemon);
+
+        Assert.assertThat(inMemoryRepository.pokemons.size(), is(1));
+    }
 
 
 
