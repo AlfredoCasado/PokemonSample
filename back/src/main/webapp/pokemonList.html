@@ -1,10 +1,9 @@
 <h2>Pokemon List</h2>
 <div>
   <label>Search: <input type="text" ng-model="$ctrl.searchText"></label>
-
   <table>
     <tr><th>Favorite</th><th>Name</th></tr>
-    <tr ng-repeat="p in $ctrl.list track by p.id | filter: $ctrl.searchText">
+    <tr ng-repeat="p in $ctrl.list | filter: $ctrl.searchText track by p.id">
       <td>
         <a href ng-click="$ctrl.favorite(p)">
           <span ng-show="{{p.favorite}}">&#9733;</span>
