@@ -61,11 +61,16 @@
         })
     }
 
-    ctrl.favorite = function(pokemon) {
-      ctrl.httpService.put('/pokemons/' + pokemon.id + '/favorite')
+    ctrl.favorite = function(id) {
+      ctrl.httpService.put('/pokemons/' + id + '/favorite')
         .then(function successCallback(response) {
+          ctrl.list = ctrl.list.map(function(p) {
+            if (p.id === id) {
+              p.favorite = !p.favorite;
+            }
+            return p;
+          });
           console.log('favorite edited');
-          ctrl.load();
         })
         .catch(function errorCallback(response) {
         });
@@ -93,13 +98,6 @@
         onView: '&',
         onDelete: '&',
         onFavorite: '&'
-      },
-      controller: function() {
-        var ctrl = this;
-
-        ctrl.favorite = function(pokemon) {
-          ctrl.onFavorite({pokemon: pokemon});
-        }
       }
     })
     .component('pokemonDetail', {
